@@ -156,6 +156,14 @@ def keep_alive():
     t = Thread(target=run)
     t.start()
 
-# --- Lancer le serveur Flask et le bot Discord
+# --- Vérification et lancement
 keep_alive()
-bot.run(os.getenv("DISCORD_TOKEN"))
+
+token = os.getenv("DISCORD_TOKEN")
+if not token:
+    print("❌ Erreur : la variable d'environnement DISCORD_TOKEN n'est pas définie. Le bot va s'arrêter.")
+    exit(1)
+
+print(f"✅ Token Discord chargé, lancement du bot...")
+
+bot.run("MTM4MDYyMjMzMjgzMzU2MjcxNQ.GkaDi9.HRzZqqTcywk7CejT0lG138bZyhAe-ASYy81cU8")
