@@ -166,4 +166,5 @@ if not token:
 
 print(f"✅ Token Discord chargé, lancement du bot...")
 
-bot.run("MTM4MDYyMjMzMjgzMzU2MjcxNQ.GkaDi9.HRzZqqTcywk7CejT0lG138bZyhAe-ASYy81cU8")
+bot.run(os.getenv("DISCORD_TOKEN"))
+
